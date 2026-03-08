@@ -10,6 +10,7 @@ Key Concepts:
 """
 
 from asyncua import Server
+from asyncua.ua import AnonymousIdentityToken
 from asyncua.crypto.security_policies import SecurityPolicyType
 import config
 
@@ -54,7 +55,7 @@ async def create_server():
     # Set authentication method
     # "Anonymous" = clients don't need credentials (for testing only)
     # In production, implement user/password or certificate authentication
-    server.set_identity_tokens(["Anonymous"])
+    server.set_identity_tokens([AnonymousIdentityToken])
 
     # Register custom namespace for application variables
     # This creates a separate namespace where we can add our custom nodes
