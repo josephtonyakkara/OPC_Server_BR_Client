@@ -8,23 +8,23 @@ def print_project_structure():
     """Print the project directory structure"""
     structure = """
 opcua_server_project/
-│
-├── main.py
-├── config.py
-│
-├── server/
-│   ├── opcua_server.py
-│   └── namespace.py
-│
-├── models/
-│   └── system_state.py
-│
-├── services/
-│   ├── variable_updater.py
-│   └── system_architecture.py
-│
-└── utils/
-    └── logger.py
+|
++-- main.py
++-- config.py
+|
++-- server/
+|   +-- opcua_server.py
+|   +-- namespace.py
+|
++-- models/
+|   +-- system_state.py
+|
++-- services/
+|   +-- variable_updater.py
+|   +-- system_architecture.py
+|
++-- utils/
+    +-- logger.py
     """
     print(structure)
 
@@ -57,22 +57,22 @@ DATA FLOW & ARCHITECTURE HIERARCHY
 ===================================
 
 PLC (OpcUa_Any Client)
-        │
-        ▼
+        |
+        v
 Python OPC UA Server
-        │
-        ├── Server Layer
-        │   └── opcua_server.py
-        │
-        ├── Namespace Layer
-        │   └── namespace.py
-        │
-        ├── Application State
-        │   └── system_state.py
-        │
-        └── Services (logic)
-            ├── variable_updater.py
-            └── logger.py
+        |
+        +-- Server Layer
+        |   +-- opcua_server.py
+        |
+        +-- Namespace Layer
+        |   +-- namespace.py
+        |
+        +-- Application State
+        |   +-- system_state.py
+        |
+        +-- Services (logic)
+            +-- variable_updater.py
+            +-- logger.py
     """
     print(flow)
 
