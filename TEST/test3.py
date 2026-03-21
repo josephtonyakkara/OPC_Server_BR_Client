@@ -12,8 +12,11 @@ async def main():
 
     # No security
     server.set_security_policy([SecurityPolicyType.NoSecurity])
-    server.set_security_IDs(["Anonymous"])
-    
+
+    # ✅ UPDATED (replace deprecated method)
+    server.set_identity_tokens([
+        ua.AnonymousIdentityToken()
+    ])
 
     # Namespace
     uri = "http://simple.opcua.server"
