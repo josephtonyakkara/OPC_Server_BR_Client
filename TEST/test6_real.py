@@ -7,7 +7,7 @@ async def main():
     server = Server()
     await server.init()
 
-    server.set_endpoint("opc.tcp://0.0.0.0:5000")
+    server.set_endpoint("opc.tcp://0.0.0.0:5002")
 
     server.set_security_policy([SecurityPolicyType.NoSecurity])
 
@@ -42,7 +42,7 @@ async def main():
 
     await server.start()
 
-    print("Server started at opc.tcp://<your-ip>:5000")
+    print("Server started at opc.tcp://<your-ip>:5002")
 
     try:
         value = 25.0
