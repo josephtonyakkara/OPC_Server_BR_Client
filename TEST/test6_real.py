@@ -45,7 +45,7 @@ async def main():
     print("Server started at opc.tcp://<your-ip>:5002")
 
     try:
-        value = 25.0
+        value = 28.0
         while True:
             value += 0.5
             await myvar.write_value(
